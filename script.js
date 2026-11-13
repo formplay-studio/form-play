@@ -107,6 +107,7 @@ conceptTitle.textContent = styles.editorial.name;
 styleDescription.textContent = styles.editorial.description;
 conceptCopy.textContent = styles.editorial.copy;
 let styleTransitionTimer;
+const styleTransitionDelay = { editorial: 125, cinematic: 260, minimal: 110 };
 function updateRange() {
   const value = Number(range.value);
   compare.style.setProperty('--position', `${value}%`);
@@ -122,6 +123,7 @@ function selectStyle(button) {
     item.classList.toggle('is-active', active);
     item.setAttribute('aria-pressed', String(active));
   });
+  lab.dataset.theme = key;
   compare.classList.add('is-switching');
   compare.setAttribute('aria-busy', 'true');
   conceptDisplay.classList.add('is-switching');
@@ -132,11 +134,10 @@ function selectStyle(button) {
     styleDescription.textContent = selected.description;
     conceptTitle.textContent = selected.name;
     conceptCopy.textContent = selected.copy;
-    lab.dataset.theme = key;
     compare.classList.remove('is-switching');
     compare.removeAttribute('aria-busy');
     conceptDisplay.classList.remove('is-switching');
-  }, reduceMotion ? 0 : 180);
+  }, reduceMotion ? 0 : styleTransitionDelay[key]);
 }
 range.addEventListener('input', updateRange);
 buttons.forEach(button => button.addEventListener('click', () => selectStyle(button)));

@@ -1,5 +1,11 @@
 # FORM / PLAY — Creative Portfolio
 
+## Dramatic Visual Direction 2.0
+
+이 별도 작업본은 기존 이미지와 기능을 보존하면서 세 방향의 화면 언어를 더 명확히 구분합니다. Editorial은 크림슨 연결감과 큰 타이포그래피, Cinematic은 딥 틸·앰버의 어둠과 넓은 이미지, Minimal은 작은 타이포그래피와 넓은 여백을 사용합니다. 이미지 파일은 재생성하거나 덮어쓰지 않았습니다.
+
+공개 배포 전에는 `index.html`을 정적 서버에서 열고 Editorial, Cinematic, Minimal 각각의 비교 슬라이더를 0%, 50%, 100%로 확인하세요. 이 폴더는 검수용 별도 버전이며 기존 GitHub Pages 배포본을 자동으로 변경하지 않습니다.
+
 동일한 인물의 시각적 변화를 탐구하는 독립 AI 비주얼 아트 디렉션 프로젝트입니다. HOME, VISUAL LAB, YOUR FRAME, STUDIES, PROCESS, ABOUT의 여섯 섹션으로 구성됩니다. RAWLANDY와는 별개의 정적 사이트이며 관련 홈페이지나 파일을 수정하지 않습니다.
 
 ## 로컬 실행
