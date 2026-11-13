@@ -364,7 +364,7 @@ body{overflow:auto!important}
 .menu-toggle{display:block;position:relative;z-index:2}
 .site-header nav{display:flex;position:absolute;left:0;right:0;top:69px;background:#fff;border-bottom:1px solid var(--line);padding:1rem var(--pad) 1.5rem;flex-direction:column;gap:0;transform:translateY(-120%);opacity:0;visibility:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .25s,visibility .35s}
 .site-header nav.is-open{transform:none;opacity:1;visibility:visible}
-.site-header nav a{font-size:1.1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.site-header nav a{font-family:Pretendard,"Noto Sans KR",sans-serif;font-size:.78rem;font-weight:400;line-height:1.35;letter-spacing:.1em;padding:.7rem 0;border-bottom:1px solid var(--line)}
 .menu-toggle[aria-expanded="true"] i{background:#711b2c}
 @media(max-width:800px){.site-header nav{top:61px}.site-header nav a{font-size:.8rem;padding:.72rem 0}}
 @media(max-width:360px){.your-frame{padding-left:1rem;padding-right:1rem}.frame-head h2{font-size:14vw}.frame-steps span{font-size:8px}}
