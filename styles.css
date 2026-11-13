@@ -312,10 +312,10 @@ body{overflow:auto!important}
 }
 
 
-#after-image{transform-origin:top center;transition:opacity 180ms ease,filter 180ms ease,transform 600ms cubic-bezier(.2,.7,.2,1)}
-.lab[data-theme="editorial"] #after-image{transform:scale(1.12) translateY(5.2%)}
-.lab[data-theme="cinematic"] #after-image{transform:scale(1.08) translateY(4.2%)}
-.lab[data-theme="minimal"] #after-image{transform:scale(1.02) translateY(1%)}
+#after-image{transform-origin:center center;transition:opacity 180ms ease,filter 180ms ease,transform 600ms cubic-bezier(.2,.7,.2,1)}
+.lab[data-theme="editorial"] #after-image{transform:scale(1.12) translateY(4.5%)}
+.lab[data-theme="cinematic"] #after-image{transform:scale(1.08) translateY(3.5%)}
+.lab[data-theme="minimal"] #after-image{transform:scale(1.02) translateY(.8%)}
 
 @media(prefers-reduced-motion:reduce){#after-image{transition:none}
 }
@@ -359,6 +359,14 @@ body{overflow:auto!important}
 .frame-notice{margin:2rem 0 0;color:#777;font:9px monospace;letter-spacing:.06em}
 .frame-compare:has(#frame-range:focus-visible) .frame-compare-line span{background:#f4f1e9;box-shadow:0 0 0 7px #f4f1e933,0 4px 20px #0008}
 @media(max-width:800px){.your-frame{padding-top:6rem;padding-bottom:6rem}.frame-head{grid-template-columns:1fr;gap:1.5rem;margin-bottom:4rem}.frame-head h2{font-size:15vw}.frame-steps{grid-template-columns:1fr 1fr}.frame-workspace{grid-template-columns:1fr}.frame-upload{min-height:65svh}.frame-controls{margin-top:.5rem}.frame-compare{max-height:72svh}}
+
+/* Keep the primary categories inside the MENU drawer at every viewport size. */
+.menu-toggle{display:block;position:relative;z-index:2}
+.site-header nav{display:flex;position:absolute;left:0;right:0;top:69px;background:#fff;border-bottom:1px solid var(--line);padding:1rem var(--pad) 1.5rem;flex-direction:column;gap:0;transform:translateY(-120%);opacity:0;visibility:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .25s,visibility .35s}
+.site-header nav.is-open{transform:none;opacity:1;visibility:visible}
+.site-header nav a{font-size:1.1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.menu-toggle[aria-expanded="true"] i{background:#711b2c}
+@media(max-width:800px){.site-header nav{top:61px}}
 @media(max-width:360px){.your-frame{padding-left:1rem;padding-right:1rem}.frame-head h2{font-size:14vw}.frame-steps span{font-size:8px}}
 
 
